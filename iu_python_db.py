@@ -30,7 +30,7 @@ class DatabaseHandler:
         """
         Insert data into a table.
         Args:
-            table_name (str): The name of the target table.
+            table_name (str): The name of the table in which data needs to add.
             column_names (str): A string containing the column names in 
                                 parentheses.
             data (tuple): A tuple containing the values to be inserted.
@@ -40,7 +40,7 @@ class DatabaseHandler:
         # Create a schema inspector
         inspector = inspect(self.db_engine)
 
-        # Check if the specified table exists in the database
+        # Check whether the specified table exists in the database
         if table_name not in inspector.get_table_names():
             raise TableNotExistException
             (f"Table '{table_name}' does not exist in the database")
@@ -88,14 +88,14 @@ class DatabaseWithDataframeOperations(DatabaseHandler):
         Insert a Pandas DataFrame into a database table.
         Args:
             df (pandas.DataFrame): The DataFrame to be inserted.
-            table_name (str): The name of the target table.
+            table_name (str): The name of the table in which data needs to add.
 
         This method inserts a Pandas DataFrame into the specified table
         """
         # Create a schema inspector
         inspector = inspect(self.db_engine)
 
-        # Check if the specified table exists in the database
+        # Check whether the specified table exists in the database
         if table_name not in inspector.get_table_names():
             raise TableNotExistException(
                 f"Table '{table_name}' does not exist in the database")

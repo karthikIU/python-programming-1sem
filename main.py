@@ -71,7 +71,9 @@ class PredictAndMapIdeal():
         `db_connection` object.
 
         Parameters:
-        - self: The instance of the class containing this method.
+        - self: The instance of the class.
+        - train_table: The name of the table for training data.
+        - ideal_table: The name of the table for ideal data.
         
         Returns:
         None

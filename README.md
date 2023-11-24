@@ -1,10 +1,13 @@
 # python-programming-1sem
 programming with python 1st assignment
 
-To start/run execute this command:
-python main.py
+To start/run this project execute this command:
+1.activate virtual env: zPython_env\scripts\activate
+2.Run main file: python main.py
 
-1. Description of the task 
+used virtual environment zPython_env directory
+
+1. Description of the task:
 We have (A) 4 training datasets and (B) one test dataset, as well as (C) datasets for 50 ideal functions. 
 All data respectively consists of x-y-pairs of values.
 
