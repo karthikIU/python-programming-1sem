@@ -7,6 +7,21 @@ To start/run this project execute this command:
 
 used virtual environment zPython_env directory
 
+1.Packages used:
+Alembic, bokeh, matplotlib, numpy, pandas, sqlalchemy, sys (module inbuilt in python), unittest, 
+Sklearn.
+2.These migrations files or code to be placed in versions folder in alembic direction, these migration files are generated with alembic command, then you need to paste code above in each file respec-tively.
+3.Created function to make run migration in “database_migration.py” file, this function will be called from “main.py”.
+4.Due to these migrations, tables gets created.
+5.command to create/generation database schema migration:
+alembic revision --autogenerate -m "file name"
+6.Access sqlite database table & check data with sqlite commands:
+a. Go to directory that has database.
+b. In terminal/cmd prompt : sqlite3 database.db
+(you should have installed sqlite3 command line tool in your pc)
+c. Command to view tables: .tables
+d. Use queris to view data in table like SELECT * FROM test_mapping
+
 1. Description of the task:
 We have (A) 4 training datasets and (B) one test dataset, as well as (C) datasets for 50 ideal functions. 
 All data respectively consists of x-y-pairs of values.
